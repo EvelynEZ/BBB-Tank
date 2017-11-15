@@ -1,0 +1,10 @@
+# instruction for service
+
+cd /lib/systemd/system/
+systemctl --system daemon-reload
+systemctl enable p1.service
+systemctl enable p1.service
+systemctl start p2.service
+systemctl start p2.service
+systemctl status p1.service
+systemctl status p1.service

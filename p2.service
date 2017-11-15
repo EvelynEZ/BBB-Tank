@@ -1,0 +1,12 @@
+[Unit]
+Description=My Game Service
+After=syslog.target network.target p1.service
+[Service]
+WorkingDirectory=/usr/bin/
+ExecStart=/usr/bin/python install.py
+SyslongIdentifier=install
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

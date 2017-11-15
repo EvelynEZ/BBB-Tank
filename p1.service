@@ -1,0 +1,12 @@
+[Unit]
+Description=My Service
+After=syslog.target network.target
+[Service]
+WorkingDirectory=/usr/bin/
+ExecStart=/usr/bin/python bluetooth.py
+SyslongIdentifier=blue
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
